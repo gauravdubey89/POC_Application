@@ -1,6 +1,6 @@
 package com.application.serviceImpl;
 
-import com.application.dto.ProductResponseDto;
+import com.application.dto.ProductRequestDto;
 import com.application.entity.Product;
 import com.application.enumerator.ErrorCode;
 import com.application.exception.APIResponseException;
@@ -21,26 +21,26 @@ public class ProductServiceImpl implements ProductService {
     private ProductRepository productRepository;
 
     @Override
-    public ProductResponseDto createProduct(ProductResponseDto productDto) throws APIResponseException {
+    public ProductRequestDto createProduct(ProductRequestDto productDto) throws APIResponseException {
         return buildProductDto(productRepository.save(buildProduct(productDto)));
     }
 
     @Override
-    public List<ProductResponseDto> getAllProduct() throws APIResponseException {
+    public List<ProductRequestDto> getAllProduct() throws APIResponseException {
         return buildProductDtos(productRepository.findAll());
     }
 
     @Override
-    public ProductResponseDto getById(String id) throws APIResponseException {
+    public ProductRequestDto getById(String id) throws APIResponseException {
         return buildProductDto(productRepository.findById(id).orElseThrow(() -> new APIResponseException(ErrorCode.PROD_100)));
     }
 
-    private List<ProductResponseDto> buildProductDtos(List<Product> products) {
+    private List<ProductRequestDto> buildProductDtos(List<Product> products) {
         return products.stream().map(product -> buildProductDto(product)).collect(Collectors.toList());
     }
 
-    private ProductResponseDto buildProductDto(Product product) {
-        return ProductResponseDto.builder()
+    private ProductRequestDto buildProductDto(Product product) {
+        return ProductRequestDto.builder()
                 .id(product.getId())
                 .productName(product.getProductName())
                 .productRate(product.getProductRate())
@@ -48,12 +48,12 @@ public class ProductServiceImpl implements ProductService {
                 .build();
     }
 
-    private Product buildProduct(ProductResponseDto productDto) throws APIResponseException {
+    private Product buildProduct(ProductRequestDto productDto) throws APIResponseException {
         return Product.builder()
-                .id(Optional.ofNullable(productDto.getId()).orElse(UUID.randomUUID().toString()))
+                .id(UUID.randomUUID().toString())
                 .productName(Optional.ofNullable(productDto.getProductName()).orElseThrow(() -> new APIResponseException(ErrorCode.PROD_100)))
-                .productRate(productDto.getProductRate())
-                .productType(productDto.getProductType())
+                .productRate(Optional.ofNullable(productDto.getProductRate()).orElseThrow(() -> new APIResponseException(ErrorCode.PROD_101)))
+                .productType(Optional.ofNullable(productDto.getProductType()).orElseThrow(() -> new APIResponseException(ErrorCode.PROD_102)))
                 .build();
     }
 }

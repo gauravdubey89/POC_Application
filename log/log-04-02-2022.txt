@@ -1,0 +1,14 @@
+2022-02-04 14:55:21.000844  INFO 6736 --- com.application.controller.ProductController       :Create Product Process
+2022-02-04 15:16:16.000223  INFO 33880 --- com.application.controller.ProductController       :Create Product Process
+2022-02-04 15:16:39.000190  INFO 33880 --- com.application.controller.ProductController       :Create Product Process
+2022-02-04 15:17:08.000940  INFO 33880 --- com.application.controller.ProductController       :Get All Product Process
+2022-02-04 15:17:35.000144  INFO 33880 --- com.application.controller.ProductController       :Get Product Process By id 3b84181c-c5a4-472b-9931-1da21c26bdaa
+2022-02-04 15:24:29.000790  INFO 19476 --- com.application.controller.ProductController       :Get All Product Process
+2022-02-04 15:26:46.000070  INFO 21492 --- com.application.controller.PurchaseController       :Create Purchase Process
+2022-02-04 15:27:37.000931  INFO 21492 --- com.application.controller.PurchaseController       :Create Purchase Process
+2022-02-04 15:27:37.000943  ERROR 21492 --- com.application.controller.PurchaseController       :Product not found
+2022-02-04 15:28:46.000090  INFO 21492 --- com.application.controller.ProductController       :Create Product Process
+2022-02-04 15:29:22.000483  INFO 21492 --- com.application.controller.ProductController       :Get All Product Process
+2022-02-04 15:29:39.000901  INFO 21492 --- com.application.controller.ProductController       :Get Product Process By id d6c2e4e1-fdb0-441f-8d62-77ae9c2bf1af
+2022-02-04 15:29:54.000091  INFO 21492 --- com.application.controller.ProductController       :Get Product Process By id d6c2e4e1-fdb0-441f-8d62-77ae9c2bf1aa
+2022-02-04 15:29:54.000102  ERROR 21492 --- com.application.controller.ProductController       :Product not found

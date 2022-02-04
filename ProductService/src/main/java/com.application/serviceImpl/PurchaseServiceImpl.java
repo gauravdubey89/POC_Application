@@ -1,9 +1,6 @@
 package com.application.serviceImpl;
 
-import com.application.dto.APIResponseDto;
-import com.application.dto.ProductResponseDto;
 import com.application.dto.PurchaseRequestDto;
-import com.application.entity.Product;
 import com.application.entity.Purchase;
 import com.application.enumerator.ErrorCode;
 import com.application.exception.APIResponseException;
@@ -13,6 +10,7 @@ import com.application.service.PurchaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -39,7 +37,8 @@ public class PurchaseServiceImpl implements PurchaseService {
 
     private Purchase buildPurchase(PurchaseRequestDto purchaseRequestDto) throws APIResponseException {
         return Purchase.builder()
-                .id(Optional.ofNullable(purchaseRequestDto.getId()).orElse(UUID.randomUUID().toString()))
+                .id(UUID.randomUUID().toString())
+                .createdDate(new Date())
                 .productId(Optional.ofNullable(productService.getById(purchaseRequestDto.getProductId()).getId()).orElseThrow(() -> new APIResponseException(ErrorCode.PURC_100)))
                 .build();
     }

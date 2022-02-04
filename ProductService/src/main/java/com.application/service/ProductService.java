@@ -1,14 +1,14 @@
 package com.application.service;
 
-import com.application.dto.ProductResponseDto;
+import com.application.dto.ProductRequestDto;
 import com.application.exception.APIResponseException;
 
 import java.util.List;
 
 public interface ProductService {
-    public ProductResponseDto createProduct(ProductResponseDto productDto) throws APIResponseException;
+    public ProductRequestDto createProduct(ProductRequestDto productDto) throws APIResponseException;
 
-    public List<ProductResponseDto> getAllProduct() throws APIResponseException;
+    public List<ProductRequestDto> getAllProduct() throws APIResponseException;
 
-    public ProductResponseDto getById(String id) throws APIResponseException;
+    public ProductRequestDto getById(String id) throws APIResponseException;
 }

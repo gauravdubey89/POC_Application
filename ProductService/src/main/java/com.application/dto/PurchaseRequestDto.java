@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 public class PurchaseRequestDto {
     private String id;
     private String productId;
-    private ProductResponseDto productResponseDto;
+    private ProductRequestDto productResponseDto;
 }

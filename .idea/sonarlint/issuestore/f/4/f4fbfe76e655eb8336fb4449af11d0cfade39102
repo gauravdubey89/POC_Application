@@ -1,5 +1,0 @@
-
-l
-java:S1128"ORemove this unused import 'org.springframework.kafka.annotation.KafkaListener'.(ύª«¬8ΐΑΎΕλ/
-Χ
-java:S1598"»This file "Application.java" should be located in "com\application" directory, not in "D:\POC_Application\LoggerService\src\main\java\com.application"(Do not use dots in directory names).(ζ΄¤‹ψÿÿÿÿ

@@ -1,6 +1,7 @@
 package com.application.controller;
 
 import com.application.dto.APIResponseDto;
+import com.application.dto.ProductRequestDto;
 import com.application.dto.ProductResponseDto;
 import com.application.util.APIObject;
 import lombok.extern.slf4j.Slf4j;
@@ -15,13 +16,13 @@ import org.springframework.web.client.RestTemplate;
 public class ProductRedirectController {
 
     @PostMapping("/create")
-    public ResponseEntity<APIResponseDto> createCart(@RequestBody ProductResponseDto productResponseDto) {
+    public ResponseEntity<APIResponseDto> createCart(@RequestBody ProductRequestDto productRequestDto) {
         RestTemplate restTemplate = new RestTemplate();
         APIObject stockAPI = new APIObject(
                 "product", "product.api", "http://localhost:8001", "/");
         HttpEntity<APIObject> apiEntity = new HttpEntity<>(stockAPI);
         ResponseEntity<APIResponseDto> apiResponseDto = restTemplate.postForEntity(
-                "http://localhost:8084/api/product/create", productResponseDto,  APIResponseDto.class);
+                "http://localhost:8084/api/product/create", productRequestDto,  APIResponseDto.class);
         return apiResponseDto;
     }
 
@@ -36,14 +37,14 @@ public class ProductRedirectController {
         return apiResponseDto;
     }
 
-    @GetMapping("/{purchaseId}")
-    public ResponseEntity<APIResponseDto> getPurchaseById(@PathVariable String purchaseId) {
+    @GetMapping("/{productId}")
+    public ResponseEntity<APIResponseDto> getPurchaseById(@PathVariable String productId) {
         RestTemplate restTemplate = new RestTemplate();
         APIObject stockAPI = new APIObject(
                 "product", "product.api", "http://localhost:8001", "/");
         HttpEntity<APIObject> apiEntity = new HttpEntity<>(stockAPI);
         ResponseEntity<APIResponseDto> apiResponseDto = restTemplate.getForEntity(
-                "http://localhost:8084/api/product/"+purchaseId, APIResponseDto.class);
+                "http://localhost:8084/api/product/"+productId, APIResponseDto.class);
         return apiResponseDto;
     }
 }

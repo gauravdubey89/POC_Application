@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
@@ -25,7 +26,7 @@ public class CartClientService {
 
     public CartRequestDto createCart(CartRequestDto cartRequestDto){
         Cart response = cartServiceBlockingStub.createCart(Cart.newBuilder()
-                .setCartId(cartRequestDto.getCartId())
+                        .setUserId(cartRequestDto.getUserId())
                 .addAllProduct(buildProducts(cartRequestDto.getProductRequestDto()))
                 .build());
         return buildCartRequestDto(response);
@@ -91,7 +92,7 @@ public class CartClientService {
 
     private Product buildProduct(ProductRequestDto productRequest) {
         return Product.newBuilder()
-                .setProductId(productRequest.getProductId())
+                .setProductId(UUID.randomUUID().toString())
                 .setProductName(productRequest.getProductName())
                 .setProductRate(Integer.parseInt(productRequest.getProductRate().toString()))
                 .setProductType(productRequest.getProductType())

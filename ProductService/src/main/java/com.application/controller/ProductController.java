@@ -2,7 +2,7 @@ package com.application.controller;
 
 import com.application.dto.APIResponseDto;
 import com.application.dto.ErrorCodeDto;
-import com.application.dto.ProductResponseDto;
+import com.application.dto.ProductRequestDto;
 import com.application.enumerator.StatusCode;
 import com.application.exception.APIResponseException;
 import com.application.service.LogService;
@@ -25,8 +25,8 @@ public class ProductController {
     private LogService logService;
 
     @PostMapping("/create")
-    public APIResponseDto createProduct(@RequestBody ProductResponseDto productDto) {
-        ProductResponseDto result = new ProductResponseDto();
+    public APIResponseDto createProduct(@RequestBody ProductRequestDto productDto) {
+        ProductRequestDto result = new ProductRequestDto();
         ErrorCodeDto errorCodeDto = new ErrorCodeDto();
         try {
             logService.logTemplate("Create Product Process", "INFO", this.getClass());
@@ -48,7 +48,7 @@ public class ProductController {
 
     @GetMapping("/all")
     public APIResponseDto getAllProduct() {
-        List<ProductResponseDto> result;
+        List<ProductRequestDto> result;
         ErrorCodeDto errorCodeDto = new ErrorCodeDto();
         try {
             logService.logTemplate("Get All Product Process", "INFO", this.getClass());
@@ -70,7 +70,7 @@ public class ProductController {
 
     @GetMapping("/{productId}")
     public APIResponseDto getProductById(@PathVariable String productId) {
-        ProductResponseDto result;
+        ProductRequestDto result;
         ErrorCodeDto errorCodeDto = new ErrorCodeDto();
         try {
             logService.logTemplate("Get Product Process By id "+productId, "INFO", this.getClass());

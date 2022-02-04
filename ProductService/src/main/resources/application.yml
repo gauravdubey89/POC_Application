@@ -11,7 +11,7 @@ spring:
     username: root
     password: mysql
     driverClassName: com.mysql.cj.jdbc.Driver
-
+    initialization-mode: always
 server:
   port: 8084
   context-path: /product-service
