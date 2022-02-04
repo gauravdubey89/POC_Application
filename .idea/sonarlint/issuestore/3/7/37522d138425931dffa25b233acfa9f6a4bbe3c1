@@ -1,0 +1,10 @@
+
+A
+java:S1075"&Remove this hard-coded path-delimiter.(­ÂÍÓûÿÿÿÿ
+A
+java:S1075"&Remove this hard-coded path-delimiter.(­ÂÍÓûÿÿÿÿ
+\	java:S899#"BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ
+á
+java:S1598"ÊThis file "LogService.java" should be located in "com\application\service" directory, not in "D:\POC_Application\LoggerService\src\main\java\com.application\service"(Do not use dots in directory names).(•ùÏÁ
+b
+java:S2095/"LUse try-with-resources or close this "BufferedWriter" in a "finally" clause.(¤ÒïÀ

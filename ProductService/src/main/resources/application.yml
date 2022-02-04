@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: "product-service"
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: org.hibernate.dialect.MySQL5Dialect
+    url: jdbc:mysql://localhost/productivity
+    username: root
+    password: mysql
+    driverClassName: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 8084
+  context-path: /product-service

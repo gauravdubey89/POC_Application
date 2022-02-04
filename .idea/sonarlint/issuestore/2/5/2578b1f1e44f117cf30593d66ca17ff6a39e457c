@@ -1,0 +1,10 @@
+
+\
+java:S1128"?Remove this unused import 'com.application.dto.APIResponseDto'.(Ó®©Ò8ï©êÌë/
+e
+java:S1128"CRemove this unused import 'com.application.dto.ProductResponseDto'.(ê©õ‹ÿÿÿÿÿ8ï©êÌë/
+]
+java:S1128";Remove this unused import 'com.application.entity.Product'.(Ã€ÙÑÿÿÿÿÿ8ï©êÌë/
+ø
+java:S1598"ÜThis file "PurchaseServiceImpl.java" should be located in "com\application\serviceImpl" directory, not in "D:\POC_Application\ProductService\src\main\java\com.application\serviceImpl"(Do not use dots in directory names).(—ÞØßüÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(—ÞØßüÿÿÿÿ

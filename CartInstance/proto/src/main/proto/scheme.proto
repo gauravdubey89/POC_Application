@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package com.application.proto;
+
+option java_multiple_files = true;
+
+message Carts{
+  repeated Cart cart = 1;
+}
+
+message Cart{
+  string cart_id = 1;
+  string user_id = 2;
+  repeated Product product = 3;
+}
+
+message Product{
+  string product_id = 1;
+  string product_name = 2;
+  int32 product_rate = 3;
+  string product_type = 4;
+}
+
+service CartService {
+  rpc createCart(Cart) returns (Cart){}
+  rpc updateCart(Cart) returns (Cart){}
+  rpc getCart(Cart) returns (Cart){}
+  rpc deleteCart(Cart) returns (Cart){}
+  rpc getAllCart(Cart) returns (Carts){}
+}

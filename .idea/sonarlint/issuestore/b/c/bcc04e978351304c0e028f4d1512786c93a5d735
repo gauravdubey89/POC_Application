@@ -1,0 +1,6 @@
+
+x	java:S116"WRename this field "upstream_url" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç¯öûùÿÿÿÿ8îÍÑ‚é/
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô¹ˆûýÿÿÿÿ8ôÍÑ‚é/
+o	java:S100#"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…È¤žýÿÿÿÿ8ôÍÑ‚é/
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸óÊì8öÍÑ‚é/
+r	java:S117#"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…È¤žýÿÿÿÿ8öÍÑ‚é/

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CartInstance/CartInstance.iml" filepath="$PROJECT_DIR$/CartInstance/CartInstance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LoggerService/LoggerService.iml" filepath="$PROJECT_DIR$/LoggerService/LoggerService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CartInstance/cart-client/cart-client.iml" filepath="$PROJECT_DIR$/CartInstance/cart-client/cart-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CartInstance/cart-service/cart-service.iml" filepath="$PROJECT_DIR$/CartInstance/cart-service/cart-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kong/kong.iml" filepath="$PROJECT_DIR$/kong/kong.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProductService/productService.iml" filepath="$PROJECT_DIR$/ProductService/productService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CartInstance/proto/proto.iml" filepath="$PROJECT_DIR$/CartInstance/proto/proto.iml" />
+    </modules>
+  </component>
+</project>
