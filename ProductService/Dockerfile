@@ -1,6 +1,6 @@
-FROM adoptopenjdk/openjdk11:latest
-ENV APP_HOME=/usr/app
-WORKDIR $APP_HOME
-COPY build/libs/*.jar app.jar
+FROM openjdk:11
+ADD target/productService-0.0.1-SNAPSHOT.jar productService-0.0.1-SNAPSHOT.jar
 EXPOSE 8084
-CMD ["java", "-jar", "app.jar"]
+#ENTRYPOINT exec java $JAVA_OPTS -jar pocapplication.jar
+# For Spring-Boot project, use the entrypoint below to reduce Tomcat startup time.
+ENTRYPOINT ["java", "-jar", "productService-0.0.1-SNAPSHOT.jar"]

@@ -1,0 +1,17 @@
+
+]
+java:S1193%"@Replace the usage of the "instanceof" operator by a catch block.(ñĞ÷8Ü€¯Âî/
+]
+java:S1193;"@Replace the usage of the "instanceof" operator by a catch block.(ñĞ÷8è€¯Âî/
+]
+java:S1193Q"@Replace the usage of the "instanceof" operator by a catch block.(ñĞ÷8ó€¯Âî/
+a
+java:S1192&"KDefine a constant instead of duplicating this literal "Error : {}" 3 times.(ë¿°˜
+`
+java:S1192+"JDefine a constant instead of duplicating this literal "EXCEPTION" 3 times.(õï±
+a
+java:S1192'"FDefine a constant instead of duplicating this literal "ERROR" 3 times.(Î‰À¬øÿÿÿÿ
+j
+java:S1192*"ODefine a constant instead of duplicating this literal "Exception : {}" 3 times.(Í–ºèşÿÿÿÿ
+
+java:S1598"ˆThis file "ProductController.java" should be located in "com\application\controller" directory, not in "D:\POC_Application\POC_Application\POC_Application\POC_Application\ProductService\src\main\java\com.application\controller"(Do not use dots in directory names).(çíËh

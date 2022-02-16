@@ -7,8 +7,8 @@ spring:
       ddl-auto: update
   datasource:
     platform: org.hibernate.dialect.MySQL5Dialect
-    url: jdbc:mysql://localhost/productivity
-    username: root
+    url: jdbc:mysql://mysql_database/productivity
+    username: mysql
     password: mysql
     driverClassName: com.mysql.cj.jdbc.Driver
     initialization-mode: always

@@ -1,6 +1,6 @@
 
 G
 java:S1153"1Directly append the argument of String.valueOf().(ЙЃхг
-у
-java:S1598"ЧThis file "LogServiceImpl.java" should be located in "com\application\serviceImpl" directory, not in "D:\POC_Application\ProductService\src\main\java\com.application\serviceImpl"(Do not use dots in directory names).(—ЮШЯьяяяя
+Ј
+java:S1598"‡This file "LogServiceImpl.java" should be located in "com\application\serviceImpl" directory, not in "D:\POC_Application\POC_Application\POC_Application\POC_Application\ProductService\src\main\java\com.application\serviceImpl"(Do not use dots in directory names).(—ЮШЯьяяяя
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(—ЮШЯьяяяя

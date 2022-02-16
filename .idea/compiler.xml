@@ -8,11 +8,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="LoggerService" />
-        <module name="cart-client" />
-        <module name="cart-service" />
-        <module name="proto" />
         <module name="kong" />
         <module name="productService" />
+      </profile>
+      <profile name="Annotation profile for CartInstance" enabled="true">
+        <sourceOutputDir name="../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cart-service" />
+        <module name="cart-client" />
+        <module name="proto" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
